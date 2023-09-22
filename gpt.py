@@ -5,7 +5,7 @@ import openai
 from constants import AppConstants as ac
 import streamlit as st
 # %%
-openai.api_key = st.secrets("OPENAI_API_KEY")
+openai.api_key = st.secrets["OPENAI_API_KEY"]
 # %%
 # List of parameters
 """
