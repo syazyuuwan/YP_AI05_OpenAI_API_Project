@@ -82,7 +82,6 @@ def main():
                             serving_size = serving_size,
                             personal_pref = personal_pref)
         user_input = custom_input+". "+user_input
-        st.text(user_input)
         with st.spinner("Generating..."):
             output = mc.meal_prep_ai(mc,input_prompt=user_input.lower())
             #output = "output"
