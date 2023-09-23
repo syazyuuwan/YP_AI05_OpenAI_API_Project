@@ -4,10 +4,7 @@ from constants import AppConstants as ac
 from gpt import ModelClass as mc
 
 def main():
-    st.set_page_config(layout="centered")
-    dark_mode = st.toggle("Dark Mode")
-    if dark_mode:
-        st.toggle("Light Mode")
+    st.set_page_config(page_title='PrepFection',page_icon='🍔')
     st.title("PrepFection")
     st.write("An AI-Powered Hyper-Customisable Meal Prep Tool")  
 
