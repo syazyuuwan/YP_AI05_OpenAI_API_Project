@@ -5,7 +5,7 @@ from gpt import ModelClass as mc
 
 def main():
     st.set_page_config(layout="centered")
-    
+    st.toggle("Dark Mode")
     st.title("PrepFection")
     st.write("An AI-Powered Hyper-Customisable Meal Prep Tool")  
 
