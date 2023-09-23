@@ -4,7 +4,7 @@ from constants import AppConstants as ac
 from gpt import ModelClass as mc
 
 def main():
-    st.set_page_config(layout="wide")
+    st.set_page_config(layout="centered")
     
     st.title("PrepFection")
     st.write("An AI-Powered Hyper-Customisable Meal Prep Tool")  
