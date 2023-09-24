@@ -2,11 +2,11 @@
 # import packages
 import os
 import openai
-from constants import AppConstants as ac
 import streamlit as st
-# %%
+from constants import AppConstants as ac
+
 openai.api_key = st.secrets["OPENAI_API_KEY"]
-# %%
+
 # List of parameters
 """
 Current parameters:
@@ -76,7 +76,7 @@ Include estimated cost based on Malaysian prices.
 Ingredients must be available in Malaysia.
 
 """
-# %%
+
 class ModelClass:
     # input handler
     def input_prompt_handler(self,**kwargs):
@@ -120,9 +120,10 @@ class ModelClass:
                 }
             ],
             max_tokens = 3000,
-            temperature = 0.1
+            temperature = 1,
+            n = 1
         )
-        recipe = response.choices[0].message.content
-        return recipe
+        recipe1 = response.choices[0].message.content
+        return recipe1
 
 # %%

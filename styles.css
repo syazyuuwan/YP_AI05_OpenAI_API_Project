@@ -1,0 +1,77 @@
+/* styles.css */
+
+/* Background */
+.st-emotion-cache-uf99v8{
+    background-color: #F5E9E2;
+}
+
+/* Form */
+.st-emotion-cache-1xw8zd0{
+    box-shadow: 4px 4px 10px #a38a7c;
+    padding: 20px;
+    background-color: #bdb2ab;
+}
+
+.logo-container {
+    text-align: center; /* Center-align the logo */
+}
+
+.logo-container p {
+    font-size: 18px; /* Adjust font size */
+    margin-top: 10px; /* Adjust spacing between title and subtitle */
+    color: #DD6136;
+}
+
+.resizable-image {
+    width: 20px; /* Specify the desired width */
+    height: auto; /* Automatically adjust the height to maintain aspect ratio */
+}
+
+/* Expander */
+.st-c8:hover {
+    color: #000000;
+}
+
+/* multi-select color */
+.st-gj {
+    background-color: #7C9E66;
+}
+
+/* success alert*/
+.st-g8 {
+    background-color: #7d9e66ce;
+}
+
+/* form button*/
+.st-emotion-cache-19rxjzo:active {
+    color: rgb(255, 255, 255);
+    border-color: #DD6136;
+    background-color: #7C9E66;
+}
+.st-emotion-cache-19rxjzo:hover {
+    color: #DD6136;
+    border-color: #DD6136;
+}
+
+/* output text*/
+.st-emotion-cache-1hynsf2 {
+    color: #2B303A;
+}
+
+/* spinner*/
+.st-emotion-cache-p6380s {
+    margin: 0px;
+    border-color: #DD6136 rgba(250, 250, 250, 0.2) rgba(250, 250, 250, 0.2);
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+/* task completed*/
+.success{
+    background-color: #7d9e667e; 
+    font-size: small;
+    border-radius: 10px;
+    padding: 5px; 
+    color: white; 
+    text-align: center;
+}

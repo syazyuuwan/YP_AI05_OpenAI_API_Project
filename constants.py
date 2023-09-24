@@ -4,7 +4,7 @@ class AppConstants:
     # options constant
     diet_pref_options = ['Any','Vegan','Vegetarian','Pescatarian','Keto',
                         'Gluten-free','Dairy-free','Nut-free']
-    home_appliance_options = ['Microwave','Stove','Oven','Air Fryer']
+    home_appliance_options = ['Microwave','Stove','Oven','Air Fryer', 'Pressure Cooker', 'Thermomix']
     cuisine_options = ['Any','Asian','Western','Mediterranean','Mexican','Indian','Italian','Fusion']
     meal_type_options = ['Any','Breakfast','Lunch','Dinner']
     cooking_skill_options = ['Any','Beginner','Expert']

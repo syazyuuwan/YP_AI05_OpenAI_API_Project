@@ -1,17 +1,27 @@
-import time
+import re
+import base64
 import streamlit as st
-from constants import AppConstants as ac
 from gpt import ModelClass as mc
+from constants import AppConstants as ac
+
+st.set_page_config(page_title='PrepFection',page_icon='🍔')
+with open('styles.css') as f:
+    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 def main():
-    st.set_page_config(page_title='PrepFection',page_icon='🍔')
-    st.title("PrepFection")
-    st.write("An AI-Powered Hyper-Customisable Meal Prep Tool")  
-
+    LOGO_IMAGE_PATH = 'C:\\Users\\nawsa\Desktop\\Capstone\\Final\\images\\Prepfection_mix_50pct.png'
     
+    st.markdown("""
+    <div class="logo-container">
+        <img src="{LOGO_IMAGE_PATH}" alt="Logo" class="resizable-image">
+        <p>"An AI-Powered Hyper-Customisable Meal Prep Tool"</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+
     with st.form(key='form'):
-        with st.expander("I have an idea", expanded=False):
-            custom_input = st.text_input("What is it?","")
+        with st.expander("I have an idea (Optional)", expanded=False):
+            custom_input = st.text_input("What is it?","", placeholder="e.g. someething with mango")
             st.text('If you only have preferred ingredients start with "something with ..."')
         col1, col2 = st.columns(2)
         
@@ -25,16 +35,16 @@ def main():
         with col2:
             serving_size = st.number_input("Serving size", 1)
                 
-            home_appliance = st.multiselect("Appliance(s) available:", ac.home_appliance_options)
+            home_appliance = st.multiselect("Appliance(s) available:", ac.home_appliance_options, placeholder="You can select multiple")
             if home_appliance == []:
                 home_appliance = ",".join(ac.home_appliance_options)
             else:
                 home_appliance = ",".join(home_appliance)
 
-        allergy = st.text_input("Allergies:", "")
+        allergy = st.text_input("Allergies:", "", placeholder="nuts, shellfish, etc.")
         if allergy == "":
             allergy = 'None'
-        exist_ingredient = st.text_input("Existing Ingredients:", "")
+        exist_ingredient = st.text_input("Existing Ingredients:", "", placeholder="Whats in your fridge? Anything expiring?")
         if exist_ingredient == "":
             exist_ingredient = 'Anything'
         
@@ -89,13 +99,38 @@ def main():
 
 
         # Display completion message
-        st.success("Task completed!")
+        st.markdown(
+    """
+    <div class="success">
+        <succ>Task completed!</succ>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
         # Split the text into a list of lines.
         lines = output.split("\n")
+        word = "Recipe:"
+        regex = re.compile(word)
+        with st.container():
+            # Iterate over the list of lines and call the st.text() function for each line.
+            for line in lines:
+                st.write(line)
+                match = regex.search(line)
+                if match:
+                    txt_filename = line.replace(":","").replace(" ","_")
+        
+        #st.write(txt_filename)
+        txt_file = open(txt_filename, "w")
+        txt_file.write(output)
+        txt_file.close()
 
-        # Iterate over the list of lines and call the st.text() function for each line.
-        for line in lines:
-            st.write(line)
+        with open(txt_filename, "rb") as file:
+            txt_data = file.read()
 
+        download_link = f'<a href="data:text/plain;base64,{base64.b64encode(open(txt_filename, "rb").read()).decode()}" download="{txt_filename}">Save Recipe</a>'
+    
+        # Display the download link
+        st.markdown(download_link, unsafe_allow_html=True)
+        
 if __name__ == "__main__":
     main()
