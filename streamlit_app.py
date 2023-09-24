@@ -11,7 +11,7 @@ with open('styles.css') as f:
 def main():
     LOGO_IMAGE_URL = "https://raw.githubusercontent.com/syazyuuwan/YP_AI05_OpenAI_API_Project/main/images/Prepfection_mix_50pct.png"
     
-    st.markdown(f"![Logo]({LOGO_IMAGE_URL})")
+    st.image(LOGO_IMAGE_URL, caption='Logo', use_column_width=True)
     st.markdown("""
     <div class="logo-container">
         <p>An AI-Powered Hyper-Customisable Meal Prep Tool</p>
