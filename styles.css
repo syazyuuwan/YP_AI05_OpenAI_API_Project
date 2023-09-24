@@ -22,10 +22,8 @@
     color: #DD6136;
 }
 
-.resizable-image {
-    width: 20px; /* Specify the desired width */
-    height: auto; /* Automatically adjust the height to maintain aspect ratio */
-}
+/*.resizable-image {
+}*/
 
 /* Expander */
 .st-c8:hover {

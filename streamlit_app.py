@@ -4,16 +4,16 @@ import streamlit as st
 from gpt import ModelClass as mc
 from constants import AppConstants as ac
 
-st.set_page_config(page_title='PrepFection',page_icon='🍔')
+st.set_page_config(page_title='PrepFection',page_icon="https://raw.githubusercontent.com/syazyuuwan/YP_AI05_OpenAI_API_Project/main/images/Prepfection_red_icon.png")
 with open('styles.css') as f:
     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 def main():
-    LOGO_IMAGE_URL = 'https://raw.githubusercontent.com/syazyuuwan/YP_AI05_OpenAI_API_Project/main/images/Prepfection_mix.png'
+    LOGO_IMAGE_URL = "https://raw.githubusercontent.com/syazyuuwan/YP_AI05_OpenAI_API_Project/main/images/Prepfection_mix.png"
     
     st.markdown("""
     <div class="logo-container">
-        <img src="{LOGO_IMAGE_PATH}" alt="Logo" class="resizable-image">
+        <img src="{LOGO_IMAGE_PATH}" alt="Logo">
         <p>"An AI-Powered Hyper-Customisable Meal Prep Tool"</p>
     </div>
     """, unsafe_allow_html=True)
