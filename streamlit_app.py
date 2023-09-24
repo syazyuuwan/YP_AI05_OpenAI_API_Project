@@ -14,7 +14,7 @@ def main():
     st.markdown("""
     <div class="logo-container">
         <img src="{LOGO_IMAGE_PATH}" alt="Logo">
-        <p>"An AI-Powered Hyper-Customisable Meal Prep Tool"</p>
+        <p>An AI-Powered Hyper-Customisable Meal Prep Tool</p>
     </div>
     """, unsafe_allow_html=True)
 
