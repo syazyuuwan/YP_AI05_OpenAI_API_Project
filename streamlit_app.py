@@ -143,9 +143,9 @@ def main():
                     txt_filename = line.replace(":","").replace(" ","_")
         
         # create contents for download
-        txt_file = open(txt_filename, "w")
-        txt_file.write(output)
-        txt_file.close()
+        #txt_file = open(txt_filename, "w")
+        #txt_file.write(output)
+        #txt_file.close()
 
         # create download link
         download_link = f'<a href="data:text/plain;base64,{base64.b64encode(open(txt_filename, "rb").read()).decode()}" download="{txt_filename}">Save Recipe</a>'
