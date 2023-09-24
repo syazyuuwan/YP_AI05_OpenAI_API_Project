@@ -14,14 +14,15 @@ class AppConstants:
     
     
     # prompt constant
+    # system prompt
     system_prompt = """
 You are a meal prep expert giving meal prep advice to customers seeking to improve or maintain their health. Include allergen warning in case other allergens are included when sharing. Include estimated prepping time, cooking time, total calories, cost based on Malaysian prices in RM, serving amount. Include serving size. Break down calories per ingredients and calories per serving. Ingredient measurements are in metric system. Include how to store and expiry. The recipe should last for as long as meal prep days.
 """
-
+    # user prompt
     user_prompt_1 = """
 dietary preferences are pescatarian. recipe can only use stove, air fryer. allergic to shellfish. cuisine from mexican. meal is for dinner. cooking level is expert. recipe may include  tomato, chili, lettuce. the cost should be any cost. health goal is for gaining weight. the recipe must be high-fiber. i want the recipe to be Very Spicy, Sweet. the meal serves 2 people.
 """
-
+    # assistant prompt
     assist_prompt_1 = """
 Based on your preferences, dietary restrictions, and goals, here's a Pescatarian, High-Fiber Mexican dinner:
 
