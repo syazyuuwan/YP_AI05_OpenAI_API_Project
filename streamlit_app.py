@@ -13,7 +13,7 @@ def main():
     
     st.markdown("""
     <div class="logo-container">
-        <img src="{LOGO_IMAGE_PATH}" alt="Logo">
+        <img src="{LOGO_IMAGE_URL}" alt="Logo">
         <p>An AI-Powered Hyper-Customisable Meal Prep Tool</p>
     </div>
     """, unsafe_allow_html=True)
