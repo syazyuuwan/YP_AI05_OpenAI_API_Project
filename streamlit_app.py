@@ -25,7 +25,7 @@ def main():
     with st.form(key='form'):
         
         # custom input
-        custom_input = st.text_input("What is it?","", placeholder="e.g. someething with mango")
+        custom_input = st.text_input("I have an idea","", placeholder="e.g. someething with mango")
         st.text('If you only have preferred ingredients start with "something with ..."')
         
         # columns for input
