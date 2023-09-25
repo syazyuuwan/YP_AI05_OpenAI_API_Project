@@ -24,10 +24,9 @@ def main():
     # create form
     with st.form(key='form'):
         
-        # expander for custom input
-        with st.expander("I have an idea (Optional)", expanded=False):
-            custom_input = st.text_input("What is it?","", placeholder="e.g. someething with mango")
-            st.text('If you only have preferred ingredients start with "something with ..."')
+        # custom input
+        custom_input = st.text_input("What is it?","", placeholder="e.g. someething with mango")
+        st.text('If you only have preferred ingredients start with "something with ..."')
         
         # columns for input
         col1, col2 = st.columns(2)
